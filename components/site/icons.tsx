@@ -1,4 +1,4 @@
-import type { SVGProps } from "react";
+import type { ReactElement, SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement> & { strokeWidth?: number };
 
@@ -20,7 +20,7 @@ function baseProps(p: IconProps) {
   };
 }
 
-export type IconComponent = (props: IconProps) => JSX.Element;
+export type IconComponent = (props: IconProps) => ReactElement;
 
 export function Cpu(props: IconProps) {
   return (
