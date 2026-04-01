@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Cpu } from "@/components/site/icons";
+import { DEVPOST_REGISTER_URL } from "@/lib/site";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -59,7 +60,9 @@ export function Navbar() {
           ))}
         </ul>
         <Link
-          href="#register"
+          href={DEVPOST_REGISTER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="shrink-0 rounded-md bg-teal-400 px-5 py-2.5 text-sm font-semibold text-teal-950 shadow-sm transition hover:bg-teal-500"
         >
           Register

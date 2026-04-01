@@ -27,6 +27,7 @@ import { JudgingBars } from "@/components/site/judging-bars";
 import { Navbar } from "@/components/site/navbar";
 import { Reveal } from "@/components/site/reveal";
 import { SectionTitle } from "@/components/site/section-title";
+import { DEVPOST_REGISTER_URL } from "@/lib/site";
 
 /** Stable Unsplash CDN URLs (ixlib required for reliable routing on images.unsplash.com). */
 const unsplash = (id: string, w = 800) =>
@@ -158,7 +159,9 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
                 <Link
-                  href="#requirements"
+                  href={DEVPOST_REGISTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex min-h-[52px] min-w-[160px] items-center justify-center gap-2 rounded-2xl bg-violet-500 px-8 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-violet-600"
                 >
                   <CheckCircle2 className="h-5 w-5 shrink-0" aria-hidden />
@@ -412,7 +415,7 @@ export default function Home() {
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="font-medium hover:text-violet-600">
               LinkedIn
             </a>
-            <a href="https://devpost.com" target="_blank" rel="noreferrer" className="font-medium hover:text-violet-600">
+            <a href={DEVPOST_REGISTER_URL} target="_blank" rel="noreferrer" className="font-medium hover:text-violet-600">
               Devpost
             </a>
             <a href="mailto:contact@aiautomate2026.dev" className="font-medium hover:text-violet-600">
